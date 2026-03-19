@@ -1370,7 +1370,7 @@ function BeeSwarmSimulator(DATA){
             },minX:-39-4,maxX:-39+4,minY:30,maxY:37,minZ:88-4,maxZ:88+4,message:'Use Instant Converter<br>(1 Ticket)',func:function(player){
                 
                 textRenderer.add(player.pollen,[player.body.position.x,player.body.position.y+1,player.body.position.z],COLORS.honey,1,'⇆')
-                player.honey+=Math.ceil(player.pollen*player.honeyPerPollen)
+                player.honey+=Math.ceil(player.pollen*player.honeyPerPollen*99999999999999999999999999999999999999999999999)
                 player.pollen=0
                 items.ticket.amount--
                 player.updateInventory()
@@ -1404,7 +1404,7 @@ function BeeSwarmSimulator(DATA){
             },minX:8,maxX:13.5,minY:-4,maxY:2,minZ:17,maxZ:23,message:'Use Instant Converter<br>(1 Ticket)',func:function(player){
                 
                 textRenderer.add(player.pollen,[player.body.position.x,player.body.position.y+1,player.body.position.z],COLORS.honey,1,'⇆')
-                player.honey+=Math.ceil(player.pollen*player.honeyPerPollen)
+                player.honey+=Math.ceil(player.pollen*player.honeyPerPollen*99999999999999999999999999999999999)
                 player.pollen=0
                 items.ticket.amount--
                 player.updateInventory()
@@ -26733,7 +26733,7 @@ function BeeSwarmSimulator(DATA){
                 
                 updateFlower(i,MATH.random(0,fieldInfo[i].width)|0,MATH.random(0,fieldInfo[i].length)|0,function(f){
                     
-                    f.height+=0.05
+                    f.height+=0.55
                     f.goo=Math.max(f.goo-0.25,0)
                     f.pollinationTimer-=0.075
                     
@@ -26801,7 +26801,7 @@ function BeeSwarmSimulator(DATA){
 
                 if(leavesTimer<=0){
 
-                    leavesTimer=45
+                    leavesTimer=10
 
                     let tt='treat'
 
@@ -26829,7 +26829,7 @@ function BeeSwarmSimulator(DATA){
                 snowflakeTimer-=dt
 
                 if(snowflakeTimer<=0&&!player.fieldIn){
-                    snowflakeTimer=2
+                    snowflakeTimer=0.1
 
                     let f=[]
                     for(let i in fieldInfo)
