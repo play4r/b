@@ -92,7 +92,7 @@ window.playerGear={
         
         superSaturator:{
 
-            count:1,
+            count:5,
             diameter:15,
             power:0.5,
             rate:1,
@@ -479,7 +479,7 @@ window.playerGear={
             },
             applyStats:function(stats,player){
                 
-                stats.gliderSpeed=18
+                stats.gliderSpeed=19
                 stats.gliderFall=-5
             },
             desc:'Floats much faster than the Parachute, allowing you to fly through the sky!<br><br>Press jump while in the air to open. ',
@@ -574,7 +574,7 @@ window.playerGear={
                 stats.bluePollen*=1.2
                 stats.whitePollen*=1.2
                 stats.redPollen*=1.2
-                stats.jumpPower*=1.1
+                stats.jumpPower*=2
                 stats.redBeeAbilityRate*=1.05
                 stats.blueBeeAbilityRate*=1.05
                 stats.whiteBeeAbilityRate*=1.05
@@ -644,7 +644,7 @@ window.playerGear={
 
             },
             desc:'This handsome mask is guaranteed to bring satisfaction into your life.<br><br>x1.75 capacity<br>x1.4 pollen<br>x1.35 pollen from bees<br>x1.15 bee ability rate<br>x1.5 honey from tokens<br>x1.8 convert rate<br>+30% defense<br>+Passive: Coin Scatter',
-            cost:['75000000 honey','35 oil','15 enzymes','1 goldEgg','999 treat'],
+            cost:['75000 honey'],
         },
 
         fireMask:{
@@ -677,7 +677,7 @@ window.playerGear={
 
             },
             desc:'Ignite your mind to enhance your red bees.<br><br>x1.75 capacity<br>x1.6 red pollen<br>+20% instant red conversion<br>+50% instant flame conversion<br>+1 bee attack<br>+1 red bee attack<br>x1.15 bee ability rate<br>+35% defense<br>+Passive: Ignite',
-            cost:['50000000 honey','30 redExtract','15 enzymes','5 glue','300 strawberry'],
+            cost:['5000 honey'],
         },
 
         bubbleMask:{
@@ -707,7 +707,7 @@ window.playerGear={
 
             },
             desc:'Harness the power of the sea to enhance your blue pollen gathering.<br><br>x2 capacity<br>x1.6 blue pollen<br>+20% instant blue conversion<br>x2 bubble pollen<br>x1.15 bee ability rate<br>+30% defense<br>+Passive: Bubble Bombs',
-            cost:['50000000 honey','30 blueExtract','15 oil','5 glue','300 blueberry'],
+            cost:['5000 honey'],
         },
         
         gummyMask:{
@@ -745,7 +745,7 @@ window.playerGear={
 
             },
             desc:'The offical mask of a gummy soldier.<br><br>x1.75 goo<br>x2 capacity<br>x1.75 white field capacity<br>x1.5 white pollen<br>x1.35 pollen<br>+25% instant white conversion<br>x1.5 honey from tokens<br>x1.75 convert rate<br>+30% defense<br>x1.2 bee ability rate<br>+Passive: Gummy Morph<br>+Passive: Coin Scatter',
-            cost:['5000000000 honey','150 glue','75 enzymes','75 oil','75 glitter'],
+            cost:['500 honey'],
         },
         
         diamondMask:{
@@ -784,7 +784,7 @@ window.playerGear={
                 player.addEffect('bubbleBombsPassive')
             },
             desc:'Proudly show off your extreme wealth to the world. Shine so brightly that others will complain.<br><br>x3 capacity<br>x1.75 blue field capacity<br>x1.5 blue pollen<br>x1.35 pollen<br>x2 convert rate<br>x2 convert rate at hive<br>x2 bubble pollen<br>+35% defense<br>x1.2 bee ability rate<br>+Passive: Diamond Drain<br>+Passive: Bubble Bombs',
-            cost:['5000000000 honey','250 blueExtract','1 diamondEgg','75 glitter','100 oil'],
+            cost:['500000 honey'],
         },
         
         demonMask:{
@@ -818,7 +818,7 @@ window.playerGear={
                 player.addEffect('ignitePassive')
             },
             desc:'Embrace hate to take on the form of a Demon Bee. Become both extremely unpleasant and powerful.<br><br>x2 capacity<br>x1.75 red field capacity<br>x1.75 red pollen<br>+50% instant flame conversion<br>x2 flame pollen<br>x1.25 bee attack<br>+35% defense<br>+20% bee ability rate<br>+Passive: X Flame<br>+Passive: Ignite',
-            cost:['5000000000 honey','350 stinger','250 redExtract','100 enzymes','75 glue'],
+            cost:['50000 honey'],
         },
     },
     
@@ -943,7 +943,7 @@ window.playerGear={
                 player.addEffect('petalStormPassive')
             },
             desc:'Drape these petals about your waist to harness unlimited flower power.<br><br>+300,000 capacity<br>x2 capacity<br>x2 loot luck<br>x1.8 convert rate<br>x1.5 honey from tokens<br>+2 white bee attack<br>x1.5 white bomb pollen<br>x1.25 bee energy<br>+Passive: Petal Storm',
-            cost:['15000000000 honey','15 starJelly','50 glitter','75 glue','1 spiritPetal'],
+            cost:['150000 honey'],
         }
     },
     
@@ -1204,7 +1204,7 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=3500000
+                stats.capacity+=3500000000
                 stats.convertRate*=5
                 stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.15)
                 stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.15)
@@ -1217,13 +1217,13 @@ window.playerGear={
                 stats.whiteBeeAttack+=2
                 stats.redBeeAttack+=2
                 stats.blueBeeAttack+=2
-                stats.defense+=0.1
+                stats.defense+=0.5
                 stats.honeyAtHive*=1.1
                 player.addEffect('inspireCoconutsPassive')
                 player.addEffect('emergencyCoconutShieldPassive')
             },
             desc:'A back-mounted coconut that protects you during emergencies.<br><br>+2,500,000 capacity<br>x5 convert rate<br>+15% instant conversion<br>+10% instant white conversion<br>x1.25 pollen<br>x1.25 white pollen<br>+2 bee attack<br>+10% defense<br>x1.1 honey at hive<br>+Passive: Emergengy Coconut Shield<br>+Passive: Inspire Coconuts',
-            cost:['20000000000 honey','75 tropicalDrink','100 redExtract','100 blueExtract'],
+            cost:['2000 honey'],
         }
     },
     
@@ -1244,23 +1244,22 @@ window.playerGear={
             },
             
             applyStats:function(stats,player){
-                
-                stats.movementCollection+=15
-                stats.walkSpeed*=1.2
-                stats.jumpPower*=1.4
+                stats.movementCollection+=1000000
+                stats.walkSpeed*=2.1
+                stats.jumpPower*=2
                 stats.pollenFromCoconuts*=2
-                stats.goo*=1.25
-                stats.beeSpeed*=1.3
+                stats.goo*=2
+                stats.beeSpeed*=5
                 stats.honeyFromTokens*=1.25
                 stats.redPollen*=1.1
                 stats.bluePollen*=1.1
                 stats.whitePollen*=1.1
-                stats.beeAttack*=1.1
+                stats.beeAttack*=2
                 stats.convertRateAtHive*=2
                 player.addEffect('coconutHastePassive')
             },
             desc:'Squishy boots that leave a trail of Goo wherever you go.<br><br>+15 movement collection<br>x1.25 goo<br>x1.3 bee speed<br>x1.25 honey from tokens<br>x1.1 pollen<br>x1.1 bee attack<br>x2 pollen from coconuts<br>x2 convert rate at hive<br>x1.2 movespeed<br>x1.4 jump power<br>+Passive: Goo Trail<br>+Passive: Coconut Haste',
-            cost:['50000000000 honey','350 glue','150 glitter','150 redExtract','150 blueExtract'],
+            cost:['500 honey'],
         },
 
         coconutClogs:{
