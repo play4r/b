@@ -21815,7 +21815,7 @@ function BeeSwarmSimulator(DATA){
         darkScythe:{
             
             collectPattern:[[0,-3],[0,-4],[1,-5],[1,-4],[1,-3],[2,-5],[2,-4],[2,-3],[3,-3],[3,-5],[4,-1],[-1,-3],[-1,-4],[-2,-3],[-3,-3],[0,-5],[-1,-5],[-2,-4],[-4,-2],[3,-4],[4,-4],[2,-2],[3,-2],[-2,-2],[-3,-2],[-4,-1]],
-            collectAmount:13,
+            collectAmount:20,
             cooldown:0.575,
             mesh:function(box,cylinder,sphere,star){
                 
@@ -21895,13 +21895,13 @@ function BeeSwarmSimulator(DATA){
                 ParticleRenderer.add({x:player.body.position.x+x,y:player.body.position.y+y,z:player.body.position.z+z,vx:-player.bodyDir[2]*2,vy:1.75,vz:player.bodyDir[0]*2,grav:0,size:MATH.random(70,120),col:[1,0,Math.random()],life:1,rotVel:MATH.random(-3,3),alpha:4.5})
             },
             desc:'Swipe through flames to unlock their dark potential. Ensue dark chaos in fields and refuel burning flames, collecting more pollen and dealing more damage. Tend a destructive field of violet fire to enhance your Super-Crit power and Instant Red Conversion.',
-            cost:['2500000000000 honey','1000 redExtract','200 stinger','50 hardWax','15 superSmoothie']
+            cost:['2500 honey']
         },
         
         tidePopper:{
             
             collectPattern:[[0,0],[-1,0],[1,0],[-2,0],[2,0],[-1,-1],[0,-1],[1,-1],[-1,-2],[0,-2],[1,-2],[-1,-3],[0,-3],[1,-3],[-1,-4],[0,-4],[1,-4],[-1,-5],[0,-5],[1,-5],[0,-6],[0,-7],[0,-8]],
-            collectAmount:13,
+            collectAmount:20,
             cooldown:1,
             mesh:function(box,cylinder,sphere,star,finalRotation){
                 
@@ -21944,7 +21944,7 @@ function BeeSwarmSimulator(DATA){
                 
             },
             desc:'Pierce through flowers and bubbles with torriental waves, washing away tokens and converting pollen from bees. Swings faster and ramps up the more you pop, then unleashes tidal waves in a violent surge at 500 bubbles. Splash Balloons with tall waves to earn Tide Blessing and re-energize tidal waves with the destruction of bubbles.',
-            cost:['2500000000000 honey','1000 blueExtract','200 stinger','30 swirledWax','15 superSmoothie']
+            cost:['2500 honey']
         },
         
         gummyBaller:{
@@ -21984,7 +21984,7 @@ function BeeSwarmSimulator(DATA){
                 
             },
             desc:'Absorb goo to conjure up a delectable arsenal of gummy wrecking balls. Cover the field in goo and collect pollen with a giant gummyball. Ricochet off Marks and Honey Tokens to build up your gummyball combo for massive gooey gains. Jump to release your gummyball prematurely in a field.',
-            cost:['1000 honey','1 glue','20 gumdrops','25 causticWax','5 turpentine']
+            cost:['1000 honey','1 glue','1 gumdrops','1 causticWax','5 turpentine']
         },
     }
 
